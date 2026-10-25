@@ -1,0 +1,216 @@
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #4b6a83;
+            background: #f5faff;
+        }
+
+        span {
+            color: #0786f9;
+        }
+
+        header {
+            background: #0a395e;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #37525e;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0786f9;
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+
+            transform: translateY(5px);
+
+        }
+
+        .hero {
+            padding: 60px 6%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+            color: white;
+            background-color: #9cc4e9;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+
+        .booking h2 {
+            margin-top: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd8e3;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #0786f9;
+            box-shadow: 0 0 0 3px #0786f925;
+        }
+
+        .booking button {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #portfolio {
+            padding: 80px 20px;
+            background-color: #664d4d;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #ccc;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.4) 70%, transparent);
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .portfolio-content p {
+            font-size: 0.88rem;
+            margin-bottom: 12px;
+            color: #e0e0e0;
+            line-height: 1.4;
+        }
+
+        .portfolio-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-portfolio {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-portfolio:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
