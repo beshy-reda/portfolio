@@ -1,216 +1,271 @@
-        * {
-            box-sizing: border-box;
-        }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #4b6a83;
+    background: #f5faff;
+    overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي في الموبايل */
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #4b6a83;
-            background: #f5faff;
-        }
+span {
+    color: #0786f9;
+}
 
-        span {
-            color: #0786f9;
-        }
+header {
+    background: #0a395e;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* يسمح للعناصر بالنزول لسطر جديد إذا ضاقت الشاشة */
+}
 
-        header {
-            background: #0a395e;
-            color: white;
-            padding: 20px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        nav {
-            display: flex;
-            gap: 20px;
-        }
+nav a:hover {
+    color: #37525e;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+.button {
+    display: inline-block;
+    background: #0786f9;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
 
-        nav a:hover {
-            color: #37525e;
-        }
+.button:hover {
+    transform: translateY(-3px);
+}
 
-        .button {
-            display: inline-block;
-            background: #0786f9;
-            color: white;
-            padding: 12px 22px;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+.hero {
+    padding: 60px 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    color: white;
+    background-color: #9cc4e9;
+    background-size: cover;
+    background-position: center;
+}
 
-        .button:hover {
+.hero-text h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
 
-            transform: translateY(5px);
+.booking {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 
-        }
+.booking h2 {
+    margin-top: 0;
+}
 
-        .hero {
-            padding: 60px 6%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
-            align-items: center;
-            color: white;
-            background-color: #9cc4e9;
-            background-size: cover;
-            background-position: center;
-        }
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 
-        .hero-text h1 {
-            font-size: 50px;
-            line-height: 1.2;
-        }
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
 
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd8e3;
+    border-radius: 6px;
+    font-size: 13px;
+}
 
-        .booking h2 {
-            margin-top: 0;
-        }
+select:focus, input:focus {
+    outline: none;
+    border-color: #0786f9;
+    box-shadow: 0 0 0 3px #0786f925;
+}
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
+.booking button {
+    width: 100%;
+    margin-top: 20px;
+}
 
-        label {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            font-size: 13px;
-            font-weight: bold;
-        }
+#portfolio {
+    padding: 80px 20px;
+    background-color: #f5faff; /* تم تعديل اللون ليتناسب مع الخلفية العامة */
+}
 
-        input,
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccd8e3;
-            border-radius: 6px;
-            font-size: 13px;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
-        select:focus {
-            outline: none;
-            border-color: #0786f9;
-            box-shadow: 0 0 0 3px #0786f925;
-        }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    font-weight: 600;
+}
 
-        .booking button {
-            width: 100%;
-            margin-top: 20px;
-        }
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
-        #portfolio {
-            padding: 80px 20px;
-            background-color: #664d4d;
-        }
+.portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ccc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #2c3e50;
-            font-weight: 600;
-        }
+.portfolio-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
 
-        .portfolio-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            background-color: #ccc;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.portfolio-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.4) 70%, transparent);
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
+.portfolio-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
 
-        .portfolio-item img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
+.portfolio-content p {
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
 
-        .portfolio-item:hover img {
-            transform: scale(1.08);
-        }
+.portfolio-links {
+    display: flex;
+    gap: 10px;
+}
 
-        .portfolio-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.4) 70%, transparent);
-            color: #ffffff;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
+.btn-portfolio {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-        .portfolio-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
+.btn-portfolio:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
 
-        .portfolio-content p {
-            font-size: 0.88rem;
-            margin-bottom: 12px;
-            color: #e0e0e0;
-            line-height: 1.4;
-        }
+/* ===================================================
+   أقسام التجاوب مع جميع الشاشات (Media Queries)
+   =================================================== */
 
-        .portfolio-links {
-            display: flex;
-            gap: 10px;
-        }
+/* للشاشات المتوسطة والأجهزة اللوحية (Tablets - أقل من 992px) */
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr; /* تحويل قسم الـ Hero إلى عمود واحد */
+        text-align: center;
+        padding: 40px 5%;
+    }
 
-        .btn-portfolio {
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+    .hero-text h1 {
+        font-size: 38px;
+    }
 
-        .btn-portfolio:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
+    .hero-text {
+        margin-bottom: 20px;
+    }
+}
+
+/* للشاشات الصغيرة والهواتف الذكية (Mobiles - أقل من 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* جعل حقول نموذج الحجز عمودية بالكامل على الموبايل */
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
